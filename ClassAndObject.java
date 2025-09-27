@@ -127,8 +127,8 @@ public class ClassAndObject{
 */
 
 //Object initialization(Direct Assignment):
-//by Reference
-
+//1. by Reference
+/* 
 class Car{
     String brand;
     int year;
@@ -143,5 +143,32 @@ public class ClassAndObject{
         car1.year=2035;
 
         System.out.println("The Car name: "+car1.brand+"\nYear: "+car1.year);
+    }
+}
+*/
+
+//2. by Constrructor
+
+class Car{
+    String brand;
+    int year;
+
+    //Constructor
+    Car(String b, int y){
+        brand=b;
+        year=y;
+    }
+
+    void display(){
+        System.out.println("Brand: "+brand+"\nYear: "+year);
+    }
+}
+
+public class ClassAndObject{
+    public static void main(String[] args) {
+        
+        //Object initialization via constructor
+        Car car1= new Car("Mercedes", 2035);
+        car1.display();
     }
 }
