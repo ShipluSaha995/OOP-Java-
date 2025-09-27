@@ -1,4 +1,4 @@
-Java OOP Projects Repository ☕️
+## Java OOP Projects Repository ☕️
 
 This repository contains my Java learning journey with a focus on Object-Oriented Programming (OOP).
 It includes small projects, practice exercises, and implementations of concepts like classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
