@@ -1,45 +1,30 @@
-## Java OOP Projects Repository ☕️
+# Java OOP Projects Repository ☕️  
 
-This repository contains my Java learning journey with a focus on Object-Oriented Programming (OOP).
-It includes small projects, practice exercises, and implementations of concepts like classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
+This repository contains my Java learning journey with a focus on **Object-Oriented Programming (OOP)**.  
+It includes small projects, practice exercises, and implementations of concepts like **classes, objects, inheritance, polymorphism, encapsulation, and abstraction**.  
 
-It’s a collection of experiments, exercises, and projects I’ve worked on while learning Java OOP.
+It’s a collection of experiments, exercises, and projects I’ve worked on while learning Java OOP.  
 
-Author
+---
 
-Shiplu Saha
+## Author  
 
-Contents
+**Shiplu Saha**  
 
-Class and Objects → Basic examples with constructors and methods.
+---
 
-Student Database Management System → Console-based project to manage student data.
+## Contents  
 
-Small OOP Exercises → Practice problems on inheritance, abstraction, and polymorphism.
+- **Class and Objects** → Basic examples with constructors and methods.  
+- **Student Database Management System** → Console-based project to manage student data.  
+- **Small OOP Exercises** → Practice problems on inheritance, abstraction, and polymorphism.  
+- **Other Practice Scripts** → Additional Java programs showcasing OOP concepts.  
 
-Other Practice Scripts → Additional Java programs showcasing OOP concepts.
+---
 
-How to Run
+## How to Run  
 
-Clone the repository:
-
-git clone <your-repo-url>
-
-
-Navigate to the project folder:
-
-cd <project-folder>
-
-
-Compile and run:
-
-javac FileName.java
-java FileName
-
-Notes
-
-Each project has its own folder with a short README.
-
-This repository is for learning and practice only.
-
-More projects and exercises will be added as I continue learning.
+1. Clone the repository:  
+   ```bash
+   git clone <https://github.com/ShipluSaha995/OOP-Java-.git>
+   git push
