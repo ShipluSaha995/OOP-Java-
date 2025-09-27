@@ -1,46 +1,45 @@
-# OOP with Java 🚀
+Java OOP Projects ☕
 
-This repository contains my practice programs and exercises for Object-Oriented Programming (OOP) in Java.
-It serves as a personal learning resource while exploring key OOP principles such as classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
----
+This repository documents my journey of learning Object-Oriented Programming (OOP) in Java.
+It includes small projects, practice exercises, and implementations of OOP concepts such as classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
 
-## 📌 Contents
+The goal of this repo is to practice and strengthen Java OOP principles through hands-on coding.
 
-* Classes and Objects
-* Constructors
-* Inheritance
-* Polymorphism
-* Encapsulation
-* Abstraction
+📌 Author
 
----
+Shiplu Saha
 
-## 🛠️ Tools & Technologies
+📂 Contents
 
-* **Language:** Java
-* **IDE:** VS Code / IntelliJ IDEA / Eclipse
-* **Version Control:** Git & GitHub
+Class and Objects → Basic examples demonstrating classes, objects, constructors, and methods.
 
----
+Student Database Management System → A simple console-based project to manage student data.
 
-## ⚡ How to Run
+Small OOP Exercises → Practice problems on encapsulation, inheritance, abstraction, and polymorphism.
 
-1. Clone the repository:
+Other Practice Scripts → Additional Java programs showcasing core OOP concepts.
 
-   ```bash
-   git clone https://github.com/ShipluSaha995/OOP-Java-.git
-   ```
-2. Navigate to the folder in your terminal or IDE.
-3. Compile and run any `.java` file:
+🚀 How to Run
 
-   ```bash
-   javac FileName.java
-   java FileName
-   ```
+Clone the repository:
 
----
+git clone <your-repo-url>
 
-## 🎯 Purpose
 
-This repository is **for practice only** and does not contain projects.
-It is meant to strengthen my understanding of **Java OOP concepts**.
+Navigate to the project folder:
+
+cd <project-folder>
+
+
+Compile and run the Java files:
+
+javac FileName.java
+java FileName
+
+📝 Notes
+
+Each project has its own folder with a README explaining its purpose and usage.
+
+This repository is for learning and practice only; not intended for production use.
+
+Repo is still in progress — more projects and exercises will be added as I continue learning.
