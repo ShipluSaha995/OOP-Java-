@@ -91,6 +91,9 @@ public class {
 
 } */
 
+//object
+
+/* 
 import java.util.Scanner;
 class Car{
     String brand;
@@ -121,3 +124,24 @@ public class ClassAndObject{
   
 }
 
+*/
+
+//Object initialization(Direct Assignment):
+//by Reference
+
+class Car{
+    String brand;
+    int year;
+}
+
+public class ClassAndObject{
+    public static void main(String[] args) {
+        Car car1= new Car(); //created an Object
+
+        // Initializing attributes directly
+        car1.brand="Mercedes";
+        car1.year=2035;
+
+        System.out.println("The Car name: "+car1.brand+"\nYear: "+car1.year);
+    }
+}
