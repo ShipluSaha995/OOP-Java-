@@ -149,6 +149,7 @@ public class ClassAndObject{
 
 //2. by Constrructor
 
+/* 
 class Car{
     String brand;
     int year;
@@ -172,3 +173,67 @@ public class ClassAndObject{
         car1.display();
     }
 }
+*/
+
+//by method
+/* 
+class Car{
+    String brand;
+    int year;
+
+    void SetValues(String b, int y){
+        brand=b;
+        year=y;
+    }
+
+    void dispolay(){
+        System.out.println("Car: "+brand+"\nYear: "+year);
+    }
+}
+
+public class ClassAndObject{
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        car1.SetValues("Mercedes", 2035);
+        car1.dispolay();
+    }
+
+}
+*/
+
+import java.util.Scanner;
+class Student{
+    String name;
+    int id;
+    String dep;
+
+    Student(String n, int i, String de ){
+        name=n;
+        id=i;
+        dep=de;
+    }
+
+    void dispaly(){
+        System.out.println("Name: "+name+"\nID: "+id+"\nDepartment: "+dep);
+    }
+}
+
+public class ClassAndObject{
+    public static  void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter name: ");
+        String name= sc.nextLine();
+        System.out.print("Enter id: ");
+        int id= sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter Department: ");
+        String dep= sc.nextLine();
+
+        Student stud = new Student(name, id, dep);
+        stud.dispaly();
+        sc.close();
+    }
+}
+
+
+
