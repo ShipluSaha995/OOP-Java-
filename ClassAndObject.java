@@ -175,7 +175,7 @@ public class ClassAndObject{
 }
 */
 
-//by method
+//3.by method
 /* 
 class Car{
     String brand;
@@ -201,6 +201,8 @@ public class ClassAndObject{
 }
 */
 
+
+//practice
 import java.util.Scanner;
 class Student{
     String name;
