@@ -170,7 +170,9 @@ public class ClassAndObject{
         
         //Object initialization via constructor
         Car car1= new Car("Mercedes", 2035);
+        Car car2= new Car("Audi", 2036);
         car1.display();
+        car2.display();
     }
 }
 */
@@ -236,5 +238,4 @@ public class ClassAndObject{
         sc.close();
     }
 }
-
 
