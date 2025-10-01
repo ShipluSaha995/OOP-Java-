@@ -186,7 +186,7 @@ class Car{
         year=y;
     }
 
-    void dispolay(){
+    void display(){
         System.out.println("Car: "+brand+"\nYear: "+year);
     }
 }
@@ -195,7 +195,7 @@ public class ClassAndObject{
     public static void main(String[] args) {
         Car car1 = new Car();
         car1.SetValues("Mercedes", 2035);
-        car1.dispolay();
+        car1.display();
     }
 
 }
@@ -236,6 +236,5 @@ public class ClassAndObject{
         sc.close();
     }
 }
-
 
 
