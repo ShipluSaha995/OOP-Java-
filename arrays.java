@@ -28,7 +28,8 @@ public class arrays {
 }
 */
 
-import java.util.Scanner;
+//find the largest value from an array
+/*import java.util.Scanner;
 public class arrays{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -53,5 +54,44 @@ public class arrays{
 
         System.out.println("Maximum: "+max);
         sc.close();
+    }
+}*/
+
+
+//Write a Java Program to Check if An Array Contains a Given Value.
+
+import java.util.Scanner;
+
+class linear{
+    void search(){
+        Scanner sc =new Scanner(System.in);
+        int n=sc.nextInt();
+
+        int[] num = new int[n];
+        for(int i=0; i<n; i++){
+            num[i]=sc.nextInt();
+        }
+
+        int x=sc.nextInt();
+        boolean found=false;
+        for(int i=0; i<n; i++){
+            if(num[i]==x){
+                System.out.println("found");
+                found=true;
+                break;
+            }
+        }
+
+        if(!found){
+            System.out.println("not found");
+        }
+        sc.close();
+    }
+}
+
+public class arrays{
+    public static void main(String[] args) {
+        linear ln=new linear();
+        ln.search();
     }
 }
