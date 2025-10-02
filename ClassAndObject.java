@@ -211,6 +211,7 @@ class Student{
     int id;
     String dep;
 
+    //constructor
     Student(String n, int i, String de ){
         name=n;
         id=i;
@@ -233,6 +234,7 @@ public class ClassAndObject{
         System.out.print("Enter Department: ");
         String dep= sc.nextLine();
 
+        //Object initialization via constructor
         Student stud = new Student(name, id, dep);
         stud.dispaly();
         sc.close();
