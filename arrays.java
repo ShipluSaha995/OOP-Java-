@@ -146,3 +146,6 @@ public class arrays{
         bi.search();
     }
 }
+
+// Write a Java Program to Find Transpose of a Matrix.
+
