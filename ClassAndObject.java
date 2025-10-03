@@ -309,11 +309,13 @@ class Car{
     String brand;
     int year;
 
+    // Parameterized constructor
     Car(String b, int y) {
         brand = b;
         year = y;
     }
 
+    //copy constructor
     Car(Car c){
         this.brand=c.brand;
         this.year=c.year;
