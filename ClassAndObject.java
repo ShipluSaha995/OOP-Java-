@@ -305,3 +305,31 @@ public class ClassAndObject{
 
 //3. Copy Constructor
 
+class Car{
+    String brand;
+    int year;
+
+    Car(String b, int y) {
+        brand = b;
+        year = y;
+    }
+
+    Car(Car c){
+        this.brand=c.brand;
+        this.year=c.year;
+    }
+
+    void display(){
+        System.out.println("brand= "+ brand+", year= "+year);
+    }
+}
+
+public class ClassAndObject{
+    public static void main(String[] args) {
+        Car c1 = new Car("Tesla", 2035);
+        Car c2 = new Car(c1);
+        c1.display();
+        c2.display();
+    }
+}
+
