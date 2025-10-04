@@ -39,3 +39,23 @@ public class Recursion{
     }
 
 }*/
+
+// Find the sum of digits of a number using recursion.
+
+class digit{
+    int dig(int n){
+        if(n==0){
+            return 0;
+        }else{
+            return (n%10)+dig(n/10);
+        }
+    }
+}
+
+public class Recursion{
+    public static void main(String[] args) {
+        digit d = new digit();
+        int result=d.dig(12345);
+        System.out.println(result);
+    }
+}
