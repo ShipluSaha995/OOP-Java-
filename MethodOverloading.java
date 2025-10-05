@@ -8,8 +8,8 @@
 
  */
 
-
- class sum{
+//Method Overloading or Polymorphism
+ /*class sum{
 
     int sum(int a, int b){
         return (a+b);
@@ -33,5 +33,38 @@ public class MethodOverloading{
         System.out.println(me.sum(10, 20, 30));
     }
 }
+*/
 
+//constructor Overloading
+
+class Student{
+    String name;
+    int id;
+    String dept;
+
+    Student(){
+        name="Jack";
+        id=03;
+        dept="CS";
+    }
+
+    Student(String name, int id, String dept){
+        this.name =name;
+        this.id=id;
+        this.dept=dept;
+    }
+
+    void display(){
+        System.out.println(name+"\n"+id+"\n"+dept+"\n");
+    }
+}
+
+public class MethodOverloading{
+    public static void main(String[] args) {
+        Student stud1 = new Student();
+        Student stud2 = new Student("Smith", 02, "EEE");
+        stud1.display();
+        stud2.display();
+    }
+}
 
