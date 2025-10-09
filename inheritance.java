@@ -9,7 +9,7 @@ the supper class
 
 */
 
-class Animal{
+/*class Animal{
     void eat(){
         System.out.println("Eating");
     }
@@ -26,6 +26,33 @@ public class inheritance {
     public static void main(String[] args) {
         Dog d = new Dog();
         d.eat();
+        d.bark();
+    }
+}*/
+
+//Overriding or Run time polymorphism
+
+class Animal{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal{
+    void eat(){
+        System.out.println("Eat");
+    }
+
+    void bark(){
+        System.out.println("bark");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat(); // it will call the eat method from the dog class by overriding the eat method of the animal class
         d.bark();
     }
 }
