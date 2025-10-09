@@ -85,3 +85,12 @@ public class inheritance {
         d.bark();
     }
 }
+
+/* 
+ There are 5 types of inheritance
+ 1. single inheritance -> parent->child
+ 2. Multilevel inheritance -> grand parent->parent->child
+ 3. Hierarchical Inheritance -> parent->child 1, parent->child 2
+ 4. Multiple Inheritance -> parent 1 & parent 2 -> child
+ 5. Hybrid Inheritance -> mix of 2 or more types of inheritance 
+ */
