@@ -59,7 +59,7 @@ public class inheritance {
 
 //If we want to access both method we have to use super keyword
 
-class Animal{
+/*class Animal{
     void eat(){
         System.out.println("Eating");
     }
@@ -84,7 +84,7 @@ public class inheritance {
         d.eat();
         d.bark();
     }
-}
+}*/
 
 /* 
  There are 5 types of inheritance
@@ -94,3 +94,26 @@ public class inheritance {
  4. Multiple Inheritance -> parent 1 & parent 2 -> child
  5. Hybrid Inheritance -> mix of 2 or more types of inheritance 
  */
+
+
+//Single inheritance
+class Animal{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Bark");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
