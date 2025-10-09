@@ -32,7 +32,7 @@ public class inheritance {
 
 //Overriding or Run time polymorphism
 
-class Animal{
+/*class Animal{
     void eat(){
         System.out.println("Eating");
     }
@@ -53,6 +53,35 @@ public class inheritance {
     public static void main(String[] args) {
         Dog d = new Dog();
         d.eat(); // it will call the eat method from the dog class by overriding the eat method of the animal class
+        d.bark();
+    }
+}*/
+
+//If we want to access both method we have to use super keyword
+
+class Animal{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal{
+    
+    void eat(){
+        super.eat(); //calls the parent class method
+        System.out.println("Eat");
+    }
+
+    void bark(){
+        System.err.println("bark");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
         d.bark();
     }
 }
