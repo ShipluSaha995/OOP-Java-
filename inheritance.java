@@ -120,7 +120,7 @@ public class inheritance {
 
 // 2.Multilevel inheritance
 
-class Animal{
+/*class Animal{
     void eat(){
         System.out.println("Eating");
     }
@@ -145,5 +145,38 @@ public class inheritance {
         p.eat();
         p.bark();
         p.weep();
+    }
+}*/
+
+// 3. Hierarchical Inheritance
+
+class Animal{
+    void eat(){
+        System.out.println("eating");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal{
+    void mewo(){
+        System.out.println("mewo");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        Cat c = new Cat();
+
+        d.bark();
+        d.eat();
+        c.mewo();
+        c.eat();
     }
 }
