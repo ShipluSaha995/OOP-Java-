@@ -8,3 +8,24 @@ The class that inherits is called the subclass and the class from which it inher
 the supper class
 
 */
+
+class Animal{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Bark");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
