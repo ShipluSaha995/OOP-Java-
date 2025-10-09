@@ -91,7 +91,7 @@ public class inheritance {
  1. single inheritance -> parent->child
  2. Multilevel inheritance -> grand parent->parent->child
  3. Hierarchical Inheritance -> parent->child 1, parent->child 2
- 4. Multiple Inheritance -> parent 1 & parent 2 -> child
+ 4. Multiple Inheritance -> parent 1 & parent 2 -> child -> java doesn't support multiple inheritance
  5. Hybrid Inheritance -> mix of 2 or more types of inheritance 
  */
 
@@ -180,3 +180,7 @@ public class inheritance {
         c.eat();
     }
 }
+
+
+
+
