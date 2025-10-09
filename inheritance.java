@@ -96,8 +96,8 @@ public class inheritance {
  */
 
 
-//Single inheritance
-class Animal{
+//1. Single inheritance
+/*class Animal{
     void eat(){
         System.out.println("Eating");
     }
@@ -115,5 +115,35 @@ public class inheritance {
         Dog d = new Dog();
         d.eat();
         d.bark();
+    }
+}*/
+
+// 2.Multilevel inheritance
+
+class Animal{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Bark");
+    }
+}
+
+class Puppy extends Dog{
+    void weep(){
+        System.out.println("weep");
+    }
+}
+
+public class inheritance {
+
+    public static void main(String[] args) {
+        Puppy p = new Puppy();
+        p.eat();
+        p.bark();
+        p.weep();
     }
 }
