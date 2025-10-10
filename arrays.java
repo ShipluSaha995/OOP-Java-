@@ -147,5 +147,5 @@ public class arrays{
     }
 }
 
-// Write a Java Program to Find Transpose of a Matrix.
+
 
