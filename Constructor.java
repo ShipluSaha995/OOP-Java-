@@ -125,7 +125,7 @@ class Car{
     String brand;
     int year;
 
-    //Default constructor
+    //user defiend
     Car(){
         brand="Mercedes";
         year=2035;
