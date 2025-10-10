@@ -88,7 +88,7 @@ public class Constructor{
 
 //3. Copy Constructor
  
-class Car{
+/*class Car{
     String brand;
     int year;
 
@@ -118,3 +118,27 @@ public class Constrructor{
     }
 }
 
+*/
+
+//Non-argumented constructor
+class Car{
+    String brand;
+    int year;
+
+    //Default constructor
+    Car(){
+        brand="Mercedes";
+        year=2035;
+    }
+
+    void dispaly(){
+        System.out.println("barnd= "+brand+", year= "+year);
+    }
+}
+
+public class Constructor{
+    public static void main(String[] args) {
+        Car c1 = new Car();
+        c1.dispaly();
+    }
+}
