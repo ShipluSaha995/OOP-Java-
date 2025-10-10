@@ -42,27 +42,19 @@ public class Constructor{
 */
 
 //1. Default constructor
-/*class Car{
-    String brand;
-    int year;
-
-    //Default constructor
-    Car(){
-        brand="Mercedes";
-        year=2035;
-    }
-
-    void dispaly(){
-        System.out.println("barnd= "+brand+", year= "+year);
-    }
+/*class Student {
+    String name;
+    int id;
 }
 
-public class Constructor{
+public class Constructor {
     public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.dispaly();
+        Student s1 = new Student(); // Java provides a default constructor
+        System.out.println(s1.name); // null
+        System.out.println(s1.id);   // 0
     }
 }
+
 */
 
 //2. Parametterized Constructor
