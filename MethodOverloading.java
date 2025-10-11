@@ -1,4 +1,4 @@
-/*Method Overloading is the feature of the object oriented programming that where multiple methods in the same can have the same 
+/*Method Overloading is the feature of the object oriented programming that where multiple methods in the same can have the same name
  but differ in the number of parametters or the type of parametters. The compiler determins which version of the method to invoke
  at compile time, making it an example of compile time polymorphism.
 
