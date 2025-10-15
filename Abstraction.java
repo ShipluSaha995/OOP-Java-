@@ -1,4 +1,26 @@
-/* Abstraction is the proccess of hiding internal implementation details and showing only the essential featuers of an object */
+/* Abstraction is the proccess of hiding internal implementation details and showing only the essential featuers of an object 
+ 
+Abstraction reduces complexity by hiding unnecessary details.
+
+Achieved in Java through:
+
+Abstract Classes
+
+Interfaces
+
+Abstract classes can have:
+
+Abstract methods (without body)
+
+Concrete methods (with body)
+
+Abstract methods must be overridden in the subclass.
+
+Cannot create objects of abstract classes.
+
+Interfaces provide 100% abstraction.
+
+*/
 
 abstract class Faculty{
     String degree;
@@ -48,3 +70,4 @@ public class Abstraction{
         chair.teach();
     }
 }
+
