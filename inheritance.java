@@ -228,6 +228,10 @@ public class inheritance{
 
 
 /*Hybrid inheritance:
+When a inheritance structure combines more than one type of inheritance, it is known as hybrid inheritance 
+
+*/
+
 
 
 
