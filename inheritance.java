@@ -193,6 +193,11 @@ which one will the child class inherit. this is called the Diamond problem
 
 */
 
+
+/*In interfaces, there is no method implementation only method declaration so no ambiguity occurs thats why java 
+ allows multiple inheritance via interfaces
+  */
+  
 interface Camera{
     void takePhoto();
 }
