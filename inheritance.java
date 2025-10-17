@@ -182,7 +182,9 @@ public class inheritance {
 }
 */
 
-/*Multiple Inheritance: Multiple Inheritance is  a feature of object oreinted programming where a class can inherits properties
+/*Multiple Inheritance:
+
+Multiple Inheritance is  a feature of object oreinted programming where a class can inherits properties
 and behaviors from more than one parent
 
 However, in java multiple inheritance in with classes is not supported to avoid ambiguity and complexity but it can be 
@@ -197,7 +199,7 @@ which one will the child class inherit. this is called the Diamond problem
 /*In interfaces, there is no method implementation only method declaration so no ambiguity occurs thats why java 
  allows multiple inheritance via interfaces
   */
-  
+
 interface Camera{
     void takePhoto();
 }
@@ -224,6 +226,8 @@ public class inheritance{
     }
 }
 
+
+/*Hybrid inheritance:
 
 
 
