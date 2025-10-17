@@ -150,7 +150,7 @@ public class inheritance {
 
 // 3. Hierarchical Inheritance
 
-class Animal{
+/*class Animal{
     void eat(){
         System.out.println("eating");
     }
@@ -178,6 +178,44 @@ public class inheritance {
         d.eat();
         c.mewo();
         c.eat();
+    }
+}
+*/
+
+/*Multiple Inheritance: Multiple Inheritance is  a feature of object oreinted programming where a class can inherits properties
+and behaviors from more than one parent
+
+However, in java multiple inheritance in with classes is not supported to avoid ambiguity and complexity but it can be 
+achieved using interfaces
+
+java does not support it because suppose two parent classes having the same method name compiler will be confused which one to call or 
+which one will the child class inherit. this is called the Diamond problem
+
+*/
+
+interface Camera{
+    void takePhoto();
+}
+
+interface MediaPlayer{
+    void PlayMusic();
+}
+
+class Mobile implements Camera, MediaPlayer{
+    public void takePhoto(){
+        System.out.println("Taking Photo");
+    }
+
+    public void PlayMusic(){
+        System.out.println("Playing Music");
+    }
+}
+
+public class inheritance{
+    public static void main(String[] args) {
+        Mobile M = new Mobile();
+        M.PlayMusic();
+        M.takePhoto();
     }
 }
 
