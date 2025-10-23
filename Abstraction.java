@@ -14,7 +14,7 @@ Abstract methods (without body)
 
 Concrete methods (with body)
 
-Abstract methods must be overridden in the subclass.
+Abstract methods must be overridden in the subclass (thats how we can achive0 Run time Polymorphism).
 
 Cannot create objects of abstract classes.
 
