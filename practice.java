@@ -1,5 +1,4 @@
 /*Implement multiple inheritanece. 3 classes A,B,C and Class C inherits both A and B
-*/
 
 interface A{
     void code();
@@ -27,3 +26,7 @@ public class practice{
     }
 
 }
+*/
+
+//Try various combination of public, private, protected in the given code and verify if it satisfies the table in table 1
+ 
