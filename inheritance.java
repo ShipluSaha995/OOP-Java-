@@ -200,7 +200,7 @@ which one will the child class inherit. this is called the Diamond problem
  allows multiple inheritance via interfaces
   */
 
-interface Camera{
+/*interface Camera{
     void takePhoto();
 }
 
@@ -224,14 +224,53 @@ public class inheritance{
         M.PlayMusic();
         M.takePhoto();
     }
-}
+}*/
 
 
 /*Hybrid inheritance:
 When a inheritance structure combines more than one type of inheritance, it is known as hybrid inheritance 
 
+java does not support hybrid inheritance directy using classes because it leads to ambigutity.
+BUt java does allow hybrid inheritance using interfaces + classes combination. 
 */
 
+interface Camera{
+    void takePhoto();
+}
 
+interface Wifi{
+    void connect();
+}
 
+class Device{
+    void power(){
+        System.out.println("Power on");
+    }
+}
+
+class SmartDevice extends Device{
+    void assistant(){
+        System.out.println("Voice Assistant.");
+    }
+}
+
+class Phone extends SmartDevice implements Camera, Wifi{
+    public void takePhoto(){
+        System.out.println("Taking Photo.");
+    }
+
+    public void connect(){
+        System.out.println("Connected to the Wifi.");
+    }
+}
+
+public class inheritance{
+    public static void main(String[] args) {
+        Phone ph = new Phone();
+        ph.power();
+        ph.assistant();
+        ph.connect();
+        ph.takePhoto();
+    }
+}
 
