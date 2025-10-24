@@ -29,7 +29,7 @@ public class practice{
 */
 
 //Try various combination of public, private, protected in the given code and verify if it satisfies the table in table 1
-
+/* 
 class A{
     public int pub=10;
     private int pri=20;
@@ -104,3 +104,19 @@ public class practice{
     }
 }
 
+*/
+//Polymorphism
+
+/* Write a java problem that will creat a class "Shape" from which you can creat two objects like 
+ "Rectangle" and Square. add following:
+ 
+ 1. Determine the attributes of both objects according to your choice (length and breadth)
+ 2. Initialize a parameterized constructor for both objects, that will recive the value of (length)
+ and (length, breadth) from main() function
+ 3. Declare two overloading methods "CalculateArea()" and two overloading methods "CalculateParameter()"
+ in the Shape class. Return the calculated area and peremeter in main() function for both Square and 
+ Rectangle, with the help of a object and point the values.
+
+ */
+
+ 
