@@ -119,4 +119,40 @@ public class practice{
 
  */
 
- 
+ import util.java.Scanner;
+ class Shape{
+    double CalculateArea(double side){
+        return side*side;
+    }
+
+    double CalculateArea(double length, double breadth){
+        return length*breadth;
+    }
+
+    double CalculateParameter(double side){
+        return 4*side;
+    }
+
+    double CalculateParameter(double length, double breadth){
+        return 2*(length+breadth);
+    }
+ }
+
+ class Square extends Shape{
+    private side;
+
+    public void setSide(double side){
+        this.side=side;
+    }
+    public double getSide(){
+        return side;
+    }
+
+ }
+
+ class Rectangle extends Shape{
+    private double length;
+    private double breadth;
+
+    
+ }
