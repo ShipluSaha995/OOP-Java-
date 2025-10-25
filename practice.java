@@ -111,15 +111,15 @@ public class practice{
  "Rectangle" and Square. add following:
  
  1. Determine the attributes of both objects according to your choice (length and breadth)
- 2. Initialize a parameterized constructor for both objects, that will recive the value of (length)
+ 2. Initialize a Parimeterized constructor for both objects, that will recive the value of (length)
  and (length, breadth) from main() function
- 3. Declare two overloading methods "CalculateArea()" and two overloading methods "CalculateParameter()"
+ 3. Declare two overloading methods "CalculateArea()" and two overloading methods "CalculateParimeter()"
  in the Shape class. Return the calculated area and peremeter in main() function for both Square and 
  Rectangle, with the help of a object and point the values.
 
  */
 
- import util.java.Scanner;
+ import java.util.Scanner;
  class Shape{
     double CalculateArea(double side){
         return side*side;
@@ -129,17 +129,17 @@ public class practice{
         return length*breadth;
     }
 
-    double CalculateParameter(double side){
+    double CalculateParimeter(double side){
         return 4*side;
     }
 
-    double CalculateParameter(double length, double breadth){
+    double CalculateParimeter(double length, double breadth){
         return 2*(length+breadth);
     }
  }
 
  class Square extends Shape{
-    private side;
+    private double side;
 
     public void setSide(double side){
         this.side=side;
@@ -148,11 +148,63 @@ public class practice{
         return side;
     }
 
+    void displaySqaure(){
+        System.out.println("Square"+"\n"+"side: "+ getSide());
+        System.out.println("Area of the Square= "+CalculateArea(getSide()));
+        System.out.println("Parimeter= "+CalculateParimeter(getSide()));
+    }
+
  }
 
  class Rectangle extends Shape{
     private double length;
     private double breadth;
 
+    public void setLength(double length){
+        this.length=length;
+    }
+
+    public double getLength(){
+        return length;
+    }
+
+    public void setBreadth(double breadth){
+        this.breadth=breadth;
+    }
+
+    public double getBreadth(){
+        return breadth;
+    }
+
+    void displayRectangle(){
     
+        System.out.println("Rectangle"+"\n"+"length: "+ getLength()+"\n"+"Breadth: "+getBreadth());
+        System.out.println("Area of the Rectangle= "+CalculateArea(getLength(), getBreadth())); // FIXED
+        System.out.println("Paramiter= "+CalculateParimeter(getLength(), getBreadth()));      // FIXED
+        
+
+    }
+ }
+
+ public class practice{
+    public static void main(String[] args) {
+        java.util.Scanner sc = new Scanner(System.in);
+
+        Square s = new Square();
+        System.out.print("Enter side: ");
+        double side=sc.nextDouble();
+        s.setSide(side);
+
+        s.displaySqaure();
+
+        Rectangle r = new Rectangle();
+        System.out.print("Enter lenght: ");
+        double length= sc.nextDouble();
+        System.out.print("Enter Breadth: ");
+        double breadth= sc.nextDouble();
+
+        r.setLength(length);
+        r.setBreadth(breadth);
+        r.displayRectangle();
+    }
  }
