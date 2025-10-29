@@ -179,8 +179,8 @@ public class practice{
     void displayRectangle(){
     
         System.out.println("Rectangle"+"\n"+"length: "+ getLength()+"\n"+"Breadth: "+getBreadth());
-        System.out.println("Area of the Rectangle= "+CalculateArea(getLength(), getBreadth())); // FIXED
-        System.out.println("Paramiter= "+CalculateParimeter(getLength(), getBreadth()));      // FIXED
+        System.out.println("Area of the Rectangle= "+CalculateArea(getLength(), getBreadth())); 
+        System.out.println("Paramiter= "+CalculateParimeter(getLength(), getBreadth()));      
         
 
     }
