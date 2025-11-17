@@ -21,7 +21,7 @@ Cannot create objects of abstract classes.
 Interfaces provide 100% abstraction.
 
 */
-
+/* 
 abstract class Faculty{
     String degree;
     int experience;
@@ -71,3 +71,4 @@ public class Abstraction{
     }
 }
 
+*/
