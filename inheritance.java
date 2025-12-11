@@ -255,10 +255,12 @@ class SmartDevice extends Device{
 }
 
 class Phone extends SmartDevice implements Camera, Wifi{
+    @Override
     public void takePhoto(){
         System.out.println("Taking Photo.");
     }
 
+    @Override
     public void connect(){
         System.out.println("Connected to the Wifi.");
     }
