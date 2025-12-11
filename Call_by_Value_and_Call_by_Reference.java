@@ -6,7 +6,7 @@
 
 */
 
-class Example {
+/*class Example {
     void change(int x){
         x=30;
     }
@@ -22,4 +22,8 @@ public class Call_by_Value_and_Call_by_Reference{
     
 
     }
-}
+}*/
+
+/*Call by Reference 
+    
+*/
