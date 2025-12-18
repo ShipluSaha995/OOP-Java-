@@ -15,6 +15,8 @@ Interfaces are used :
 1. To enforce common behavior
 2. To support polymorphism
 3. To reduce tight coupling
+4. To achieve multiple abstraction
+5. To achieve loose coupling
 
 */
 
