@@ -51,12 +51,8 @@ For exception handaling in java we use
 //try-catch block
 
 class Tr{
-    int a;
-    int b;
-
+    
     Tr(int a, int b){
-        this.a=a;
-        this.b=b;
         try{
             int result=a/b;
             System.out.println(result);
