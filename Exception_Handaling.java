@@ -35,6 +35,15 @@ Exception Occurs:
 6. Insufficient System Resources
 
 There are 3 types of exception
-1.
+1. Checked Exception-----> compiler checks at compile time
+2. Uncheked Exception----> occure during run time due to programming mistakes
+3. Error-----------------> Serious problems that cannot be handeled by programmer 
+
+
+For exception handaling in java we use 
+1. try-catch block
+2. finally key-word
+3. throw key-word
+4. throws key-word
 
 */
