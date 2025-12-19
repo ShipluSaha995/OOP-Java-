@@ -50,7 +50,7 @@ For exception handaling in java we use
 
 //try-catch block
 
-class Tr{
+/*class Tr{
     
     Tr(int a, int b){
         try{
@@ -66,5 +66,21 @@ public class Exception_Handaling{
     public static void main(String[] args) {
         Tr t = new Tr(10, 0);
     }
-}
+}*/
 
+//we can also do the try-catch in main fuction
+
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        int a=10;
+        int b=0;
+        try{
+            int result=a/b;
+            System.out.println(result);
+        }catch(ArithmeticException e){
+            System.out.println("Cannot divided by 0.");
+        }
+
+        System.out.println("Programe continues normally.");
+    }
+}
