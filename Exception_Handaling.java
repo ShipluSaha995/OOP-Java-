@@ -47,3 +47,27 @@ For exception handaling in java we use
 4. throws key-word
 
 */
+
+//try-catch block
+
+class Tr{
+    int a;
+    int b;
+
+    Tr(int a, int b){
+        this.a=a;
+        this.b=b;
+        try{
+            int result=a/b;
+            System.out.println(result);
+        }catch(ArithmeticException e){
+            System.out.println("Cannot divided by 0.");
+        }
+    }
+}
+
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        Tr t = new Tr(10, 0);
+    }
+}
