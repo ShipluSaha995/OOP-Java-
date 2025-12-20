@@ -1,6 +1,4 @@
 
-import java.io.InterruptedIOException;
-
 /*Implement multiple inheritanece. 3 classes A,B,C and Class C inherits both A and B
 
 interface A{
@@ -449,8 +447,6 @@ public class Practice{
 }*/
 
 //Inter thread Communication
-
-import java.lang.Thread;
 class Shared {
     synchronized void produce() throws InterruptedException {
         System.out.println("Producer is producing...");
