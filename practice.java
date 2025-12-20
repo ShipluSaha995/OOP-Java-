@@ -119,7 +119,7 @@ public class practice{
 
  */
 
- import java.util.Scanner;
+ /*import java.util.Scanner;
  class Shape{
     double CalculateArea(double side){
         return side*side;
@@ -209,4 +209,4 @@ public class practice{
     }
  }
 
- 
+ */

@@ -87,7 +87,7 @@ public class Exception_Handaling{
 
 //multiple catch block
 
-class Mul{
+/*class Mul{
     Mul(){
         int arr[]={10, 20, 30};
         try{
@@ -108,5 +108,55 @@ class Mul{
 public class Exception_Handaling{
     public static void main(String[] args) {
         Mul m = new Mul();
+    }
+}*/
+
+
+//Finally block
+
+/*public class Exception_Handaling {
+    public static void main(String[] args) {
+        try {
+            int a = 10;
+            int b = 0;
+            int result = a / b;
+            System.out.println(result);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by 0.");
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+}*/
+
+// we can also use try-catch block inside a finally block if we need 
+
+class Fin{
+
+    Fin(){
+        try{
+            int a=10;
+            int b=0;
+            int result=a/b;
+            System.out.println(result);
+        }catch(ArithmeticException e){
+            System.out.println("Exception caught in outside catch block.");
+        }
+        finally{
+            System.out.println("Inside finnaly block");
+            try{
+                int arr[]={10, 20, 30};
+                System.out.println(arr[5]);
+            }catch(ArrayIndexOutOfBoundsException e){
+                System.out.println("Exception caught inside the finally block.");
+            }
+            
+        }
+    }
+}
+
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        Fin F = new Fin();
     }
 }
