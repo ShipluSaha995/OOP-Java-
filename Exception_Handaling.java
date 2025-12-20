@@ -131,7 +131,7 @@ public class Exception_Handaling{
 
 // we can also use try-catch block inside a finally block if we need 
 
-class Fin{
+/*class Fin{
 
     Fin(){
         try{
@@ -158,5 +158,32 @@ class Fin{
 public class Exception_Handaling{
     public static void main(String[] args) {
         Fin F = new Fin();
+    }
+}*/
+
+//Throw keyword
+
+/*Throw key word basically use for custom exceptios but we can also use it for default exception. 
+it means programmer is throwing the exception not compiler */
+
+class Th{
+    Th(){
+        int balance=5000;
+        try{
+            if(balance<10000){
+                throw new ArithmeticException("Insufficient balance.");
+            }
+            else{
+                System.out.println("Transacton succesfull.");
+            }
+        }catch(ArithmeticException e){
+            System.out.println("Exception caught " + e.getMessage());
+        }
+    }
+}
+
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        Th T = new Th();
     }
 }
