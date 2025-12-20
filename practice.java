@@ -1,3 +1,6 @@
+
+import java.io.InterruptedIOException;
+
 /*Implement multiple inheritanece. 3 classes A,B,C and Class C inherits both A and B
 
 interface A{
@@ -410,7 +413,7 @@ public class Practice{
 
 //static Synchronization
 
-import java.lang.Thread;
+/*import java.lang.Thread;
 
 class Counter{
     static int count =0;
@@ -442,5 +445,37 @@ public class Practice{
 
         t1.start();
         t2.start();
+    }
+}*/
+
+//Inter thread Communication
+
+import java.lang.Thread;
+class Shared {
+    synchronized void produce() throws InterruptedException {
+        System.out.println("Producer is producing...");
+        wait();   // wait for consumer
+        System.out.println("Producer resumed");
+    }
+
+    synchronized void consume() {
+        System.out.println("Consumer consumed");
+        notify(); // notify producer
+    }
+}
+
+public class Practice {
+    public static void main(String[] args) {
+        Shared obj = new Shared();
+
+        new Thread(() -> {
+            try {
+                obj.produce();
+            } catch (Exception e) {}
+        }).start();
+
+        new Thread(() -> {
+            obj.consume();
+        }).start();
     }
 }
