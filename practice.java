@@ -210,3 +210,237 @@ public class practice{
  }
 
  */
+
+ //Thread
+
+ /*import java.lang.Thread;
+
+ class MyThread extends Thread{
+    @Override
+    public void run(){
+        System.out.println("Runnig thread");
+    }
+
+ }
+
+ public class Practice{
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        thread.start();
+    }
+ }*/
+
+/*import java.lang.Thread;
+class MyThread implements Runnable{
+    public void run(){
+        System.out.println("Running Thread");
+    }
+
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        MyThread M =new MyThread();
+        Thread T= new Thread(M);
+        T.start();
+    }
+}*/
+
+//sleep alive
+/*import java.lang.Thread;
+class MyThread extends Thread{
+    public void run(){
+        try{
+            System.out.println("Threade Sleeping.");
+            Thread.sleep(200);
+            System.out.println("Thread awake.");
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        t.start();
+        System.out.println("is threade alive: "+ t.isAlive());
+
+    }
+}*/
+
+//join
+/*import java.lang.Thread;
+class MyThread extends Thread{
+    public void run(){
+        System.out.println(getName()+" is running.");
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) throws InterruptedException{
+
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        t1.start();
+        t1.join();
+        t2.start();
+        t2.join();
+        System.out.println("Both thread have finished their execution.");
+    }
+}*/
+
+//max_priority and min_priority
+/*import java.lang.Thread;
+class MyThread extends Thread{
+    public void run(){
+        System.out.println(getName()+" With priority "+getPriority()+" is running");
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        t1.setPriority(Thread.MAX_PRIORITY);
+        t2.setPriority(Thread.MIN_PRIORITY);
+        t1.start();
+        t2.start();
+    }
+}*/
+
+//Synchronization
+/*import java.lang.Thread;
+class Counter{
+    int count =0;
+    synchronized void increment(){
+        count++;
+        System.out.println("Count: "+count);
+    }
+}
+
+class Test extends Thread{
+    Counter c;
+    Test(Counter c){
+        this.c=c;
+    }
+
+    public void run(){
+        c.increment();
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        Counter Obj = new Counter();
+        Test t1 = new Test(Obj);
+        Test t2 = new Test(Obj);
+
+        t1.start();
+        t2.start();
+    }
+}*/
+
+/*import java.lang.Thread;
+class Table{
+    synchronized void print(int n){
+        for(int i=1; i<=10; i++){
+            System.out.println(n*i);
+        }
+    }
+}
+
+class MyThread extends Thread{
+    Table t;
+    MyThread(Table t){
+        this.t=t;
+    }
+    public void run(){
+        t.print(5);
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        Table obj = new Table();
+        MyThread t1 = new MyThread(obj);
+        MyThread t2 = new MyThread(obj);
+
+        t1.start();
+        t2.start();
+    }
+    
+}*/
+
+//synchronized block
+/*import java.lang.Thread;
+
+class Counter{
+    int count =0;
+    void increment(){
+        synchronized (this) {
+            count++;
+            System.out.println("Count: "+count);
+        }
+       
+    }
+}
+
+class Test extends Thread{
+    Counter c;
+    Test(Counter c){
+        this.c=c;
+    }
+
+    public void run(){
+        c.increment();
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        Counter Obj = new Counter();
+        Test t1 = new Test(Obj);
+        Test t2 = new Test(Obj);
+
+        t1.start();
+        t2.start();
+    }
+}*/
+
+//static Synchronization
+
+import java.lang.Thread;
+
+class Counter{
+    static int count =0;
+    static synchronized  void increment(){
+        
+        count++;
+        System.out.println("Count: "+count);
+    
+       
+    }
+}
+
+class Test extends Thread{
+    Counter c;
+    Test(Counter c){
+        this.c=c;
+    }
+
+    public void run(){
+        c.increment();
+    }
+}
+
+public class Practice{
+    public static void main(String[] args) {
+        Counter Obj = new Counter();
+        Test t1 = new Test(Obj);
+        Test t2 = new Test(Obj);
+
+        t1.start();
+        t2.start();
+    }
+}
