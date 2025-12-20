@@ -192,7 +192,7 @@ public class Exception_Handaling{
 
 /*Thrwos key-word is use to handle the exception in a another caller class */
 
-class Tho{
+/*class Tho{
     static void divide(int a, int b)throws ArithmeticException{
         
         int result=a/b;
@@ -207,6 +207,37 @@ public class Exception_Handaling{
             Tho.divide(10, 0);
         }catch(ArithmeticException e){
             System.out.println("Exception caught: "+ e.getMessage());
+        }
+    }
+}*/
+
+//Custom Exception
+
+/*A Custom Exception is a user-defined exception created by extending the Exception class (for checked exceptions) 
+or RuntimeException (for unchecked exceptions).
+It allows programmers to create meaningful exceptions specific to their application logic. */
+
+class AgeException extends Exception{
+    AgeException(String message){
+        super(message);
+    }
+}
+
+class Custom{
+    static void ageCheck(int age)throws AgeException{
+        if(age<18){
+            throw new AgeException("Age must be 18 or older");
+        }else{
+            System.out.println("valid");
+        }
+    }
+}
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        try{
+            Custom.ageCheck(15);
+        }catch(AgeException e){
+            System.out.println("Exception caught: " + e.getMessage());
         }
     }
 }
