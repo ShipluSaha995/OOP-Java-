@@ -186,7 +186,7 @@ public class practice{
     }
  }
 
- public class practice{
+ public class Practice{
     public static void main(String[] args) {
         java.util.Scanner sc = new Scanner(System.in);
 

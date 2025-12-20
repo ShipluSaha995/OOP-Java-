@@ -70,7 +70,7 @@ public class Exception_Handaling{
 
 //we can also do the try-catch in main fuction
 
-public class Exception_Handaling{
+/*public class Exception_Handaling{
     public static void main(String[] args) {
         int a=10;
         int b=0;
@@ -82,5 +82,31 @@ public class Exception_Handaling{
         }
 
         System.out.println("Programe continues normally.");
+    }
+}*/
+
+//multiple catch block
+
+class Mul{
+    Mul(){
+        int arr[]={10, 20, 30};
+        try{
+            int result=arr[2]/0;
+            
+            System.out.println(result);
+
+        }catch(ArithmeticException e){
+            System.out.println("Arithmetic Exception Occur");
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Array index out of range");
+        }catch(Exception e){
+            System.out.println("General exception occured");
+        }
+
+    }
+}
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        Mul m = new Mul();
     }
 }
