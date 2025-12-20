@@ -166,7 +166,7 @@ public class Exception_Handaling{
 /*Throw key word basically use for custom exceptios but we can also use it for default exception. 
 it means programmer is throwing the exception not compiler */
 
-class Th{
+/*class Th{
     Th(){
         int balance=5000;
         try{
@@ -185,5 +185,28 @@ class Th{
 public class Exception_Handaling{
     public static void main(String[] args) {
         Th T = new Th();
+    }
+}*/
+
+//Throws key word
+
+/*Thrwos key-word is use to handle the exception in a another caller class */
+
+class Tho{
+    static void divide(int a, int b)throws ArithmeticException{
+        
+        int result=a/b;
+        System.out.println(result);
+        
+    }
+}
+
+public class Exception_Handaling{
+    public static void main(String[] args) {
+        try{
+            Tho.divide(10, 0);
+        }catch(ArithmeticException e){
+            System.out.println("Exception caught: "+ e.getMessage());
+        }
     }
 }
