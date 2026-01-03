@@ -234,7 +234,7 @@ pause and give others threads of the same priority a chance to execute
 
 */
 
-class Th implements Runnable {
+/*class Th implements Runnable {
     public void run(){
         for(int i=1; i<=5; i++){
             System.out.println(Thread.currentThread().getName()+": "+i);
@@ -253,5 +253,58 @@ public class ThreadMain{
 
         t1.start();
         t2.start();
+    }
+}*/
+
+/*
+join():
+
+the join method in java causes the currrent thread to wait until the thread which is called 
+has finished execution.
+
+--> ensures sequential execution among threads 
+--> can wait indefinitely or for a specified time
+--> helps in synchronizing  threads in multithreaded programms
+--> throws InterruptedException
+
+*/
+
+
+
+class JoinDemo extends Thread {
+
+    public JoinDemo(String name) {
+        super(name);
+    }
+
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(getName() + " : " + i);
+            try {
+                Thread.sleep(1000); 
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class ThreadMain {
+    public static void main(String[] args) {
+
+        JoinDemo t1 = new JoinDemo("Thread-1");
+        JoinDemo t2 = new JoinDemo("Thread-2");
+        JoinDemo t3 = new JoinDemo("Thread-3");
+
+        t1.start();
+
+        try {
+            t1.join(); 
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
+        t2.start();
+        t3.start();
     }
 }
