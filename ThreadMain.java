@@ -182,7 +182,7 @@ pause execution for a specific period of time.
 
 */
 
-class Th implements Runnable{
+/*class Th implements Runnable{
     private int num;
     private boolean isEven;
 
@@ -214,6 +214,43 @@ public class ThreadMain{
     public static void main(String[] args) {
         Thread t1 = new Thread(new Th(2, true));
         Thread t2 = new Thread(new Th(1, false));
+        t1.start();
+        t2.start();
+    }
+}*/
+
+/*
+yield(): 
+
+Thread.yield() is a static method in java that causes currently executing thread to temporarily 
+pause and give others threads of the same priority a chance to execute
+
+--> its a hint to the thread scheduler execution order is not granted
+--> The current thread moves freom running to runnable state
+--> Does not release locks
+--> Useful for improving CPU utilization and fairness.
+--> It is a static method: always affects the current thread.
+
+
+*/
+
+class Th implements Runnable {
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.println(Thread.currentThread().getName()+": "+i);
+            Thread.yield();
+        }
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Th());
+        Thread t2 = new Thread(new Th());
+
+        t1.setName("Thread 1: ");
+        t2.setName("Thread 2: ");
+
         t1.start();
         t2.start();
     }
