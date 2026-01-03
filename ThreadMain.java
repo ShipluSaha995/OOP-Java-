@@ -103,7 +103,7 @@ public class ThreadMain{
 
 //performing multiple task from multiple thread
 
-class Task1 implements Runnable {
+/*class Task1 implements Runnable {
     public void run(){
         System.out.println("Task1 is running.");
     }
@@ -126,3 +126,48 @@ public class ThreadMain{
 }
 
 //which thread will execute first and which one will execute last its depends on JVM and Thread Scheduler.
+
+*/
+
+//priorities:
+/* 
+
+def: Thread priority is a parameter in java that specifies the relative importance of a thread and determines the order in 
+which threads are scheduled executuion by the CPU.
+
+--> Jvm provides the prioprities to each thread and according to this these priorities jvm allocates the proccessor.
+--> priorities are represented in the form of integer values in range of 1-10.
+--> 1-> MIN_Priority
+--> 5-> NORM_Priority
+--> 10-> MAX_Priority
+
+*/
+
+class Th implements Runnable{
+    public void run(){
+        //Thread.currentThread().setName("Shiplu1");
+        System.out.println(Thread.currentThread().getName()+" Priotity:"+Thread.currentThread().getPriority());
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Th()); 
+        Thread t2 = new Thread(new Th()); 
+        Thread t3 = new Thread(new Th());
+        Thread t4 = new Thread(new Th());
+        Thread t5 = new Thread(new Th());
+        
+        t1.setPriority(Thread.MAX_PRIORITY);
+        t2.setPriority(Thread.NORM_PRIORITY);
+        t3.setPriority(Thread.MIN_PRIORITY);
+        t4.setPriority(6);
+        t5.setPriority(7);
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+    }
+}
