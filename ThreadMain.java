@@ -143,7 +143,7 @@ which threads are scheduled executuion by the CPU.
 
 */
 
-class Th implements Runnable{
+/*class Th implements Runnable{
     public void run(){
         //Thread.currentThread().setName("Shiplu1");
         System.out.println(Thread.currentThread().getName()+" Priotity:"+Thread.currentThread().getPriority());
@@ -169,5 +169,52 @@ public class ThreadMain{
         t3.start();
         t4.start();
         t5.start();
+    }
+}*/
+
+/*sleep()
+
+Thread.sleep() is a static method of the thread class that causes the currently executing thread to
+pause execution for a specific period of time.
+
+--> public static native void sleep(long mili) throws InterruptedException.
+--> public static void sleep (long mili, int name) throws InterruptedException. 
+
+*/
+
+class Th implements Runnable{
+    private int num;
+    private boolean isEven;
+
+    Th(int start, boolean isEven){
+        this.num=start;
+        this.isEven=isEven;
+    }
+
+    public void run(){
+        try{
+            while(true){
+                if(isEven && num%2==0){
+                    System.out.println("Even: "+ num);
+                    num+=2;
+                    Thread.sleep(1000);
+                }else if(!isEven && num%2!=0){
+                    System.out.println("Odd: "+num);
+                    num+=2;
+                    Thread.sleep(1000);
+                }
+            }
+        }catch(InterruptedException e){
+            System.out.println(e);
+        }
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Th(2, true));
+        Thread t2 = new Thread(new Th(1, false));
+        t1.start();
+        t2.start();
     }
 }
