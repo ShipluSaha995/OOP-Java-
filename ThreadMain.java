@@ -37,6 +37,17 @@ VLC
 
 */
 
+
+//Thread life-cycle: by using the thread class (5 stages )
+/*                               JVM will allocate the proccess              when task is completed                      
+born/create thread---> Runnable-----------------------------------> Runing--------------------------> Dead
+                            ^                                          |
+                            |                                          |
+                            |                                          |
+                        (sleep(),                 waiting,           suspend)
+
+*/
+
 //we can create threade by extending the thread class or implementing the runable interface
 
 //Extending thread class
@@ -57,7 +68,7 @@ public class ThreadMain{
 
 //implementing runnable interface
 
-class Th implements Runnable{
+/*class Th implements Runnable{
     public void run(){
         System.out.println("Threade runnig.");
     }
@@ -67,5 +78,25 @@ public class ThreadMain{
     public static void main(String[] args) {
         Thread t1 = new Thread(new Th());
         t1.start();
+    }
+}*/
+
+//performing single task from multiple threads
+
+class Task implements Runnable{
+    public void run(){
+        System.out.println(Thread.currentThread().getName()+" is running");
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Task());
+        Thread t2 = new Thread(new Task());
+        Thread t3 = new Thread(new Task());
+
+        t1.start();
+        t2.start();
+        t3.start();
     }
 }
