@@ -83,7 +83,7 @@ public class ThreadMain{
 
 //performing single task from multiple threads
 
-class Task implements Runnable{
+/*class Task implements Runnable{
     public void run(){
         System.out.println(Thread.currentThread().getName()+" is running");
     }
@@ -99,4 +99,30 @@ public class ThreadMain{
         t2.start();
         t3.start();
     }
+}*/
+
+//performing multiple task from multiple thread
+
+class Task1 implements Runnable {
+    public void run(){
+        System.out.println("Task1 is running.");
+    }
 }
+
+class Task2 implements Runnable{
+    public void run(){
+        System.out.println("Task2 is running");
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Task1());
+        Thread t2 = new Thread(new Task2());
+
+        t1.start();
+        t2.start();
+    }
+}
+
+//which thread will execute first and which one will execute last its depends on JVM and Thread Scheduler.
