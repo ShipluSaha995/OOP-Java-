@@ -39,9 +39,9 @@ VLC
 
 //we can create threade by extending the thread class or implementing the runable interface
 
+//Extending thread class
 
-
-class th extends Thread{
+/*class th extends Thread{
     public void run(){
         System.out.println("Thread running.");
     }
@@ -50,6 +50,22 @@ class th extends Thread{
 public class ThreadMain{
     public static void main(String[] args){
         th t1 = new th();
+        t1.start();
+    }
+}*/
+
+
+//implementing runnable interface
+
+class Th implements Runnable{
+    public void run(){
+        System.out.println("Threade runnig.");
+    }
+}
+
+public class ThreadMain{
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Th());
         t1.start();
     }
 }
