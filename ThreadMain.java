@@ -271,7 +271,7 @@ has finished execution.
 
 
 
-class JoinDemo extends Thread {
+/*class JoinDemo extends Thread {
 
     public JoinDemo(String name) {
         super(name);
@@ -308,3 +308,79 @@ public class ThreadMain {
         t3.start();
     }
 }
+*/
+
+/*
+Synchronization:
+
+It is a machanism in java that ensures that only one thread at a time can access a shared resource
+thereby preventing data inconsistency 
+
+
+*/
+
+
+//extra
+/*import java.util.Random;
+import java.util.Scanner;
+
+class Search extends Thread {
+    private int[] arr;
+    private int start;
+    private int end;
+    private int target;
+
+    public Search(int[] arr, int start, int end, int target, String threadName) {
+        this.arr = arr;
+        this.start = start;
+        this.end = end;
+        this.target = target;
+        this.setName(threadName);
+    }
+
+    @Override
+    public void run() {
+        for (int i = start; i <= end; i++) {
+            if (arr[i] == target) {
+                System.out.println("Number " + target +
+                        " found at index " + i +
+                        " by " + Thread.currentThread().getName());
+            }
+        }
+    }
+}
+
+public class ThreadMain {
+    public static void main(String[] args) {
+
+        int[] arr = new int[200];
+        Random ran = new Random();
+
+        // Generate random numbers
+        for (int i = 0; i < 200; i++) {
+            arr[i] = ran.nextInt(1000);
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number to search: ");
+        int N = sc.nextInt();
+
+        // Create threads
+        Search t1 = new Search(arr, 0, 40, N, "Thread-1");
+        Search t2 = new Search(arr, 41, 80, N, "Thread-2");
+        Search t3 = new Search(arr, 81, 120, N, "Thread-3");
+        Search t4 = new Search(arr, 121, 160, N, "Thread-4");
+        Search t5 = new Search(arr, 161, 199, N, "Thread-5");
+
+        // Start threads
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+
+        sc.close();
+    }
+}
+*/
+
